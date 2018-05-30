@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript exercise</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <script>
+    const menuItems = [
+      {
+        name: 'American Hot Dog',
+        description: 'Nobis odio necessitatibus expedita vitae amet error eum mollitia, non voluptas? Ex magnam recusandae iure voluptates officia fugit itaque nemo illo velit.',
+        expirationDate: '09-24-2018'
+      },
+      {
+        name: 'Beano',
+        description: 'Facilis reiciendis vero molestias error eaque mollitia sapiente porro illum. Repudiandae sint impedit nihil dignissimos autem animi ipsum tempore nisi ratione distinctio.',
+        expirationDate: '03-11-2018'
+      },
+      {
+        name: 'Dog From Hell',
+        description: 'Aspernatur, eaque soluta, nesciunt distinctio at repudiandae iusto atque quas aut nihil enim eveniet! Alias, sint numquam saepe quibusdam. Voluptas, nisi, voluptate.',
+        expirationDate: '03-21-2018'
+      },
+      {
+        name: 'Rockaway Beach',
+        description: 'Animi, at, sit. Facere consectetur sed reprehenderit eveniet, voluptatibus, dolorum quis, at nihil fugit ullam dicta distinctio libero quisquam iste perspiciatis architecto.',
+        expirationDate: '10-03-2018'
+      },
+      {
+        name: 'The Real Man',
+        description: 'Dignissimos unde tempore, qui cumque dicta ullam maxime eveniet totam minus debitis pariatur a perspiciatis deleniti, nostrum soluta, voluptas numquam et aliquam!',
+        expirationDate: '05-27-2018'
+      },
+      {
+        name: 'Westside, Bestside',
+        description: 'Beatae ratione sint facilis, tenetur similique! Dicta natus esse maiores illum. Sit id enim ex, maiores mollitia molestiae possimus ipsam aspernatur, corrupti.',
+        expirationDate: '03-24-2018'
+      },
+    ];
+
+    const renderList = (items) => {
+      if (!Array.isArray(items)) {
+        console.error('Please check that you return array');
+        return `<h2 style="color:red">Error: It's not an array. Please check that you return array</h2>`
+      }
+      return `
+        <ul class="menu">
+          ${items.map(item => {
+            return `
+              <li>
+                <h2>${item.name}</h2>
+                <p>Expiration date - ${item.expirationDate}</p>
+                <p>${item.description}</p>
+              </li>
+            `;
+          }).join('')}
+        </ul>
+      `;
+    };
+
+    const filteredItems = filterByExpiration(menuItems);
+    document.body.innerHTML = renderList(filteredItems);
+  </script>
+</body>
+</html>
