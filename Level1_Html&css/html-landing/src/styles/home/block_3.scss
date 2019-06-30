@@ -1,0 +1,138 @@
+.block-3 {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  &__ {
+    &img {
+      width: 100%;
+    }
+
+    &headline {
+      font-size: 2.4rem;
+      font-weight: 800;
+      font-family: 'Open Sans', sans-serif;
+      color: #555559;
+      letter-spacing: -0.1025rem;
+      align-self: flex-end;
+      margin: 0;
+      position: relative;
+
+      @media all and (max-width: 48rem) {
+        font-size: 1.6rem;
+        letter-spacing: -0.068rem;
+      }
+
+      &:before {
+        content: "";
+        width: 3.2rem;
+        height: 0.2rem;
+        background-color: #84959c;
+        display: block;
+        position: absolute;
+        left: -5rem;
+        top: 1.9rem;
+
+        @media all and (min-width: 100rem) {
+          width: 2.25vmax;
+          height: 0.138vmax;
+          left: -3.475vmax;
+          top: 1.32vmax;
+        }
+
+        @media all and (max-width: 48rem) {
+          width: 1.75rem;
+          left: -3.5rem;
+        }
+
+      }
+
+      @media all and (min-width: 100rem) {
+        font-size: 1.67vmax;
+      }
+    }
+
+    &text {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: 'Open Sans', sans-serif;
+      color: #555559;
+      letter-spacing: -0.057rem;
+      margin-top: 2.6rem;
+
+      @media all and (max-width: 64rem) {
+        font-size: 1.2rem;
+        letter-spacing: -0.04rem;
+        margin-top: 1.75rem;
+      }
+
+      &-wrapper {
+        display: grid;
+        grid-template-rows: 42.5% 57.5%;
+        align-items: flex-start;
+        margin-left: 19%;
+        grid-template-columns: 77.5%;
+
+        @media all and (max-width: 64rem) {
+          grid-template-rows: 32% 68%;
+        }
+
+        @media all and (max-width: 48rem) {
+          grid-template-rows: 25% 75%;
+        }
+
+        @media all and (max-width: 30rem) {
+          margin: 15% 0 15% 19%;
+        }
+      }
+
+      @media all and (min-width: 100rem) {
+        font-size: 1.25vmax;
+        letter-spacing: -0.04vmax;
+        margin-top: 1.8vmax;
+      }
+    }
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+
+    @media all and (max-width: 30rem) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    &:nth-of-type(2) {
+      .block-3__text-wrapper {
+        margin-left: 18%;
+      }
+    }
+
+    &:nth-of-type(3) {
+      .block-3__text-wrapper {
+        .block-3__text {
+          margin-top: 2.8rem;
+        }
+
+        grid-template-rows: 46% 54%;
+      }
+
+      @media all and (max-width: 48rem) {
+        .block-3__text-wrapper {
+          .block-3__text {
+            margin-top: 0;
+          }
+
+          grid-template-rows: 25% 75%;
+        }
+      }
+    }
+  }
+
+
+}

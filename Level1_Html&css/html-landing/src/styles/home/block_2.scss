@@ -1,0 +1,82 @@
+.block_2 {
+  width: 100%;
+  background: #fbfafa;
+  position: relative;
+  z-index: -1;
+
+  &__ {
+    &img {
+      margin: 0 auto;
+      display: block;
+      padding: 11.5rem 0 2rem;
+      min-width: 6.35%;
+
+      @media all and (max-width: 48rem) {
+        padding: 5.75rem 0 1rem;
+      }
+    }
+
+    &headline {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 5.6rem;
+      font-weight: 300;
+      color: #555559;
+      line-height: 7.25rem;
+      max-width: 65%;
+      margin: 0 auto;
+      letter-spacing: -0.2rem;
+      text-align: center;
+
+      @media all and (min-width: 100rem) {
+        font-size: 4vmax;
+        line-height: 5vmax;
+      }
+
+      @media all and (max-width: 48rem) {
+        font-size: 2.8rem;
+        letter-spacing: -0.1rem;
+        line-height: 3.625rem;
+      }
+    }
+
+    &btn {
+      background: #286782;
+      border-radius: 0.6rem;
+      border: 0px solid;
+      width: 31rem;
+      letter-spacing: -0.075rem;
+      padding: 0 0 0 0.5rem;
+      height: 6.5rem;
+      font-size: 2rem;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: #fff;
+      margin: 7.7rem 0 17.45rem;
+
+      @media all and (min-width: 100rem) {
+        width: 22vmax;
+        height: 4.5vmax;
+        font-size: 1.4vmax;
+        letter-spacing: -0.005vmax;
+        border-radius: 0.42vmax;
+      }
+
+      @media all and (max-width: 48rem) {
+        margin: 5.15rem 0 8.725rem;
+        border-radius: 0.4rem;
+        width: 20.66rem;
+        letter-spacing: -0.05rem;
+        padding: 0 0 0 0.333rem;
+        height: 4.35rem;
+        font-size: 1.33rem;
+      }
+
+      &-wrapper {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: 0 20.35%;
+      }
+    }
+  }
+}

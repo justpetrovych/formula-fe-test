@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width")
+    meta(name="author", content=" N.A. Zhydejkina")
+    meta(name="Description", content="Hotdogs")
+    title Hotdogs
+    link(rel="apple-touch-icon", sizes="76x76", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    link(rel="manifest", href="img/favicon/site.webmanifest")
+    link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+    link(name="apple-mobile-web-app-status-bar" content="#ffffff")
+  body
+    main.home-page
+      include home/block_1.pug
+      include common/header.pug
+      include home/block_2.pug
+      include home/block_3.pug
+      include common/footer.pug
